@@ -1,0 +1,303 @@
+@media (width >= 376px){
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  :root{
+    --content-primary: #ffffff;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --color-inverse: #030203;
+    --backgeround-primary: #020202;
+    --background-secondary: #111012;
+    --background-tertiary: #24222E;
+    --background-brand: #C58DE7;
+    --background-gray: #3D3D3D;
+    --accent-pink: #D586E0;
+    --accent-blue: #91A1FA;
+    --accent-green: #77C00A;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+    --gradient-border: linear-gradient(
+    90deg, 
+    #77C0AF 0%,
+    #D1DC97 14.84%,
+    #E9A9B3 32.15%,
+    #D586E0 65.79%,
+    #91A1FA 84.58%
+    );
+    --gradient-background: linear-gradient(
+      90deg,
+      #D586E0 0%,
+      #91A1FA 98.93%
+    );
+    --gradient-content: linear-gradient(
+      90deg,
+      #C7C9CC 0%,
+      #3D3D3D 100%
+    );
+    --font-family-sora: "Sora", sans-serif;
+    --font-family-mono: "Roboto Mono", monospace;
+    --font-family-flex: "Roboto Flex", sans-serif;
+
+    --display-large: 800 72px/130% var(--font-family-sora);
+    --display-medium: 800 40px/130% var(--font-family-sora);
+    --display-small: 700 32px/120% var(--font-family-sora);
+
+    --overline: 700 16px/150% var(--font-family-mono);
+
+    --paragraph-large: 500 16px/150% var(--font-family-flex);
+    --paragrapg-medium: 500 14px/150% var(--font-family-flex);
+    --paragraph-small: 500 12px/150% var(--font-family-flex);
+    --label-medium: 700 20px/150% var(--font-family-flex);
+    --label-small: 700 16px/150% var(--font-family-flex);
+    --label-large: 700 20px/150% var(--font-family-flex);
+
+  }
+
+  body {
+   width: 1365px;
+   height: 768px;  
+   background-color: black; 
+   background-image: url(../images/backgroundimage.svg);
+  
+  }
+
+  
+  .titleLogo{
+    color: aliceblue;
+    font: var(--font-family-sora);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 130%;
+  }
+  .spanHeader {
+    font: var(--overline);
+    background: linear-gradient(to right, #C7C9CC 0%, #3D3D3D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .logoImg {
+    width: 34px;
+    height: 34px;
+  } 
+  .logo {
+    display: flex;
+    gap: 11px;
+    
+  }
+ 
+  .title {
+    font: var(--display-large);
+    color:var(--content-primary);
+    width: 509px;
+    
+  }
+
+  .titlemd {
+    font: var(--paragrapg-medium);
+    color: var(--content-brand);
+  }
+  .person {
+    width: 25px;
+    height: 25px;
+  }
+  .resultQuestion{
+    font: var(--paragraph-small);
+    color: var(--content-secondary);
+  }
+  .subtitle {
+    font: var(--label-large);
+    color: var(--content-primary);
+  }
+
+  .paragraph {
+    font: var(--paragraph-large);
+    color: var(--content-secondary);
+  }
+  .quantity {
+    font: var(--label-medium);
+    color: var(--content-tertiary);
+  }
+  .checkbox-button{
+    display: none;
+  }
+    label[for="dontRepeat"] {
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    background-color: var(--content-tertiary); 
+    border-radius: 999px;
+    border-color: var(--content-tertiary);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  .checkbox-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2px; 
+    background-image: var(--gradient-border);
+    border-radius: 999px;
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+  }
+
+
+  .checkbox-button:checked + label[for="dontRepeat"] {
+    background-image: var(--gradient-background);
+  }
+
+
+  .checkbox-button:checked + label[for="dontRepeat"] .checkbox-border {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+
+  label[for="dontRepeat"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 999px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+  }
+
+
+  .checkbox-button:checked + label[for="dontRepeat"]::after {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: var(--gradient-background);
+  }
+  .dontRepeat{
+    color: var(--content-primary);
+  }
+
+  #number{
+    /* Novas configurações de tamanho e cor */
+    width: 86px;
+    height: 48px;
+    background-color: var(--background-tertiary);
+  
+    /* Mantido para a borda gradiente funcionar */
+   border: 2px solid var(--background-tertiary); /* Garante que haja um espaço para a borda */
+  
+    /* Estilos para o input */
+    padding: 0 8px; /* Ajustei o padding para o novo tamanho */
+    font-size: 16px;
+    border-radius: 6px; /* Ajustei o raio da borda para ficar melhor com o novo tamanho */
+    text-align: center; /* Alinha o texto no centro do input */
+    outline: none; /* Remove a borda padrão do navegador ao focar */
+  
+    /* Cores e transição */
+    color: var(--content-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  
+  /* Transição suave para o efeito de foco */
+  transition: all 0.3s ease;
+  }
+
+  #number:focus {
+    border: solid transparent; 
+    background-image: linear-gradient(var(--background-tertiary), var(--background-tertiary)),
+    linear-gradient(45deg, #77C0AF, #D1DC97, #E9A9B3, #D586E0, #91A1FA);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  #numberInitial{
+    /* Novas configurações de tamanho e cor */
+    width: 86px;
+    height: 48px;
+    background-color: var(--background-tertiary);
+  
+    /* Mantido para a borda gradiente funcionar */
+   border: 2px solid var(--background-tertiary); /* Garante que haja um espaço para a borda */
+  
+    /* Estilos para o input */
+    padding: 0 8px; /* Ajustei o padding para o novo tamanho */
+    font-size: 16px;
+    border-radius: 6px; /* Ajustei o raio da borda para ficar melhor com o novo tamanho */
+    text-align: center; /* Alinha o texto no centro do input */
+    outline: none; /* Remove a borda padrão do navegador ao focar */
+  
+    /* Cores e transição */
+    color: var(--content-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  
+    /* Transição suave para o efeito de foco */
+    transition: all 0.3s ease;
+  }
+  #numberInitial:focus {
+    border: solid transparent; 
+    background-image: linear-gradient(var(--background-tertiary), var(--background-tertiary)),
+    linear-gradient(45deg, #77C0AF, #D1DC97, #E9A9B3, #D586E0, #91A1FA);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  #numberFinal{
+    /* Novas configurações de tamanho e cor */
+    width: 86px;
+    height: 48px;
+    background-color: var(--background-tertiary);
+  
+    /* Mantido para a borda gradiente funcionar */
+   border: 2px solid var(--background-tertiary); /* Garante que haja um espaço para a borda */
+  
+    /* Estilos para o input */
+    padding: 0 8px; /* Ajustei o padding para o novo tamanho */
+    font-size: 16px;
+    border-radius: 6px; /* Ajustei o raio da borda para ficar melhor com o novo tamanho */
+    text-align: center; /* Alinha o texto no centro do input */
+    outline: none; /* Remove a borda padrão do navegador ao focar */
+  
+    /* Cores e transição */
+    color: var(--content-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  
+    /* Transição suave para o efeito de foco */
+    transition: all 0.3s ease;
+   
+  }
+  #numberFinal:focus {
+    border: solid transparent; 
+    background-image: linear-gradient(var(--background-tertiary), var(--background-tertiary)),
+    linear-gradient(45deg, #77C0AF, #D1DC97, #E9A9B3, #D586E0, #91A1FA);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  .numeros {
+    display: grid;  
+    gap: 10px; 
+    justify-items: center;
+    
+  }
+  .inicial {
+    display: grid;  
+    gap: 10px; 
+    justify-items: center;
+  }
+  .final{
+    display: grid;  
+    gap: 10px; 
+    justify-items: center;
+  }
+  
+}
+
+

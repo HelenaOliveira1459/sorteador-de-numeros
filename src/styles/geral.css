@@ -1,0 +1,147 @@
+@media (width >= 376px){
+   .logoImg {
+    width: 34px;
+    height: 34px;
+  } 
+  .logo {
+    display: grid;
+    
+  }
+
+  .logoSpace{
+    display: flex;
+    gap: 11px;
+    padding-bottom: 32px;
+  }
+  body {
+    padding-left: 134px;
+    padding-top: 80px;
+    padding-bottom: 153px;
+  }
+
+  .baseSorteador{
+    display: grid;
+    gap: 32px;
+  }
+
+  .descriptions{
+    display: flex;
+    gap: 10px;
+  }
+  .person {
+    width: 20px;
+    height: 20px;
+  }
+
+  .description{
+    display: grid;
+    width: 358px;
+    height: 36px;
+    padding-block: 36px;
+  }
+  .layout {
+    display: flex;
+    gap: 150px;
+  }
+  .descRandom {
+    width: 482px; 
+    height: 100px; 
+    display: grid;
+
+  }
+
+  aside {
+    display: grid;
+  }
+  .sorteador {
+    display: flex;
+    width: 482px;
+    height: 5px;
+    align-items: center;
+    align-content: center;
+    
+  }
+  .numbersRandom {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+  }
+  .dontRepeatButton{
+    display: flex;
+    gap: 10px;
+  }
+  .dontRepeat{
+    width: 110px;
+  }
+  .subtitleDont{
+    color: var(--content-primary, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+  }
+  .drawNumber{
+    color: var(--content-primary);
+    width: 482px;
+    height: 56px;
+    background-color:  #1a1a1a;;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px; /* Adicionei um border-radius para as bordas */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .imgDraw{
+    width: 24px;
+    height: 24px;
+  }
+  .drawNumber {
+  /* Propriedades fornecidas por você */
+  color: var(--content-primary);
+  width: 482px;
+  height: 56px;
+  background-color: var(--background-tertiary);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  /* Estilos para a borda gradiente */
+  border-radius: 10px;
+  border: 2px solid transparent; /* Essencial: Borda transparente para reservar espaço */
+  
+  /* A magia acontece aqui: o gradiente é a borda, o fundo sólido é o centro */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* Efeito de transição */
+  transition: all 0.4s ease;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+
+/* Efeito ao passar o mouse */
+.drawNumber:hover {
+  /* No hover, o gradiente pode girar ou se mover */
+  background-image: linear-gradient(var(--background-tertiary), var(--background-tertiary)), 
+  linear-gradient(-45deg, #77C0AF, #D1DC97, #E9A9B3, #D586E0, #91A1FA);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.drawNumber:hover::before {
+  /* No hover, a borda se torna visível */
+  transform: scale(1);
+  opacity: 1;
+}
+  
+}

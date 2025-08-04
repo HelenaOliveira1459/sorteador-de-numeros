@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteador</title>
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logoSpace">
+        <img src="../images/logo.png" alt="" class="logoImg">
+        <h2 class="titleLogo">Numbers</h2>
+      </div>      
+      <span class="spanHeader">Online - Gratuito</span>
+    </div>
+    
+  </header>
+  <div class="layout">
+    <main>
+      <div class="baseSorteador">       
+        <h1 class="title">SORTEADOR DE NÚMEROS</h1>
+        <div class="description">
+          <div class="descriptions">
+            <img class="person" src="../images/person.svg" alt="">
+            <h3 class="titlemd">Como funciona o sorteador de números?</h3> 
+          </div>
+          <p class="resultQuestion">O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+        </div>
+        <div class="description">
+          <div class="descriptions">
+            <img src="../images/person.svg" alt="">
+            <h3 class="titlemd">Posso escolher o intervalo dos números?</h3> 
+          </div>
+          <p class="resultQuestion">Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div class="descRandom">
+        <h2 class="subtitle">QUERO SORTEAR: </h2>
+        <p class="paragraph">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+      </div>
+      
+      <div class="sorteador">
+        <div class="numbersRandom">
+          <div class="numeros">
+            <label class="quantity" for="number">NÚMEROS</label>
+            <input type="text" id="number" name="number">
+          </div>
+          <div class="inicial">
+            <label class="quantity" for="numberInitial">DE:</label>
+            <input type="text" id="numberInitial" name="numberInitial">
+          </div>
+          <div class="final">
+            <label class="quantity" for="numberFinal">DE:</label>
+            <input type="text" id="numberFinal" name="numberFinal">
+          </div> 
+        </div>  
+      </div>
+      <div class="dontRepeatButton">
+        <input type="checkbox" id="dontRepeat" class="checkbox-button">
+        <label for="dontRepeat" class="dontRepeat"></label>
+        <h2 class="subtitleDont">Não repetir números</h2>
+      </div>  
+      <div class="buttonDraws">
+        
+        <button type="submit" class="drawNumber" id="drawNumber">
+          <h2>Sortear</h2>
+          <img src="../images/arrow.svg" alt="" class="imgDraw">          
+        </button>
+        
+        
+      </div>  
+    </aside> 
+  </div>
+  
+  <script type="module" src="../scripts/home.js"></script>
+</body>
+</html>
