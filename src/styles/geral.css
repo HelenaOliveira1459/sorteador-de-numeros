@@ -1,4 +1,4 @@
-@media (width >= 376px){
+@media screen and (width >= 376px){
    .logoImg {
     width: 34px;
     height: 34px;
@@ -14,7 +14,7 @@
     padding-bottom: 32px;
   }
   body {
-    padding-left: 134px;
+    padding-inline: 100px;
     padding-top: 80px;
     padding-bottom: 153px;
   }
@@ -41,7 +41,7 @@
   }
   .layout {
     display: flex;
-    gap: 150px;
+    gap: 110px;
   }
   .descRandom {
     width: 482px; 
@@ -50,7 +50,7 @@
 
   }
 
-  aside {
+  .home {
     display: grid;
   }
   .sorteador {
@@ -127,21 +127,41 @@
   transition: all 0.4s ease;
   cursor: pointer;
   letter-spacing: 3px;
-}
+  }
 
 /* Efeito ao passar o mouse */
-.drawNumber:hover {
-  /* No hover, o gradiente pode girar ou se mover */
-  background-image: linear-gradient(var(--background-tertiary), var(--background-tertiary)), 
-  linear-gradient(-45deg, #77C0AF, #D1DC97, #E9A9B3, #D586E0, #91A1FA);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
+  .drawNumber:hover {
+    /* No hover, o gradiente pode girar ou se mover */
+    background-image: linear-gradient(var(--background-tertiary), var(--background-tertiary)), 
+    linear-gradient(-45deg, #77C0AF, #D1DC97, #E9A9B3, #D586E0, #91A1FA);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
 
-.drawNumber:hover::before {
-  /* No hover, a borda se torna visível */
-  transform: scale(1);
-  opacity: 1;
-}
-  
+  .drawNumber:hover::before {
+    /* No hover, a borda se torna visível */
+    transform: scale(1);
+    opacity: 1;
+  }
+  .asideResult{
+    padding-inline: 100px;
+    display: grid;
+    height: 50px;
+    
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding-block: 30px;
+  }
+  .resultado {
+    color: var(--content-primary);
+    height: 100px;
+    width: 84px;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-primary);
+    align-items: center;
+  }
 }

@@ -1,4 +1,4 @@
-@media (width >= 376px){
+@media screen and (width >= 376px){
   * {
     padding: 0;
     margin: 0;
@@ -296,6 +296,17 @@
     display: grid;  
     gap: 10px; 
     justify-items: center;
+  }
+  .resultRandom{
+    color: var(--content-primary);
+  }
+  .numberResult{
+    color: var(--content-secondary);
+  }
+  .results{
+    display: flex;
+    gap: 50px;
+    padding-block: 50px;
   }
   
 }

@@ -3,17 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Resultado do Sorteio</title>
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
-    <h1>O resultado do sorteio foi: <span id="resultado"></span></h1>
+    <header>
+        <div class="logo">
+            <div class="logoSpace">
+            <img src="../images/logo.png" alt="" class="logoImg">
+            <h2 class="titleLogo">Numbers</h2>
+        </div>      
+      <span class="spanHeader">Online - Gratuito</span>
+    </div>
+    
+  </header>
+    <div class="layout">
+    <main>
+      <div class="baseSorteador">       
+        <h1 class="title">SORTEADOR DE NÚMEROS</h1>
+        <div class="description">
+          <div class="descriptions">
+            <img class="person" src="../images/person.svg" alt="">
+            <h3 class="titlemd">Como funciona o sorteador de números?</h3> 
+          </div>
+          <p class="resultQuestion">O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+        </div>
+        <div class="description">
+          <div class="descriptions">
+            <img src="../images/person.svg" alt="">
+            <h3 class="titlemd">Posso escolher o intervalo dos números?</h3> 
+          </div>
+          <p class="resultQuestion">Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+        </div>
+      </div>
+    </main>
+    <aside class="asideResult">
+      <h2 class="resultRandom">Resultado do Sorteio</h2>
+      <span class="numberResult">1º resultado</span>
+      <div class="results">
+        <div class="resultado" id="resultadoUm"></div>
+        <div class="resultado" id="resultadoDois"></div>
+      </div>
+      
 
-    <script>
-        // Lê o parâmetro 'sorteio' da URL
-        const parametros = new URLSearchParams(window.location.search);
-        const numeroSorteado = parametros.get('sorteio');
+      <button type="submit" class="drawNumber" id="drawNumber">
+          <h2>Sortear Novamente</h2>
+          <img src="../images/novamente.svg" alt="" class="imgDraw">          
+        </button>
+    </aside> 
+    
+  </div>
 
-        // Exibe o número sorteado na página
-        document.getElementById('resultado').textContent = numeroSorteado;
-    </script>
 </body>
 </html>
